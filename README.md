@@ -30,7 +30,7 @@
 
 ### 1、数据获取
 
-编写**python**爬虫爬取数据（[**点击查看源码**]()）
+编写**python**爬虫爬取数据（[**点击查看源码**](https://github.com/kikoxxxi/lg_data_analysis/tree/master/lg_spider)）
 
 主要包括使用requests请求数据，编写re正则表达式和xpath提取并清洗所需字段
 
@@ -173,7 +173,7 @@ sns.boxplot(x="companySize",y="bottomSalary",showmeans=True,data=company_positio
 
 ### 9、企业对不同工作经验的求职者的要求
 
-首先使用**python**的**jieba**对职位描述进行分词处理和**re**正则清洗数据（[**点击查看源码**]()），最后用superset可视化。
+首先使用**python**的**jieba**对职位描述进行分词处理和**re**正则清洗数据，最后用superset可视化
 
 #### 分析
 
