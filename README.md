@@ -64,8 +64,6 @@ HAVING count > 3
 ORDER BY count DESC
 ```
 
-#### 分析
-
 <img src="img/image-20200409133530529.png" alt="image-20200409133530529" style="zoom: 50%;" />
 
 从上图可以看出，岗位需求主要集中在五大城市——北京、上海、深圳、杭州、广州，这五个城市的需求总和几乎占了90%。相比而言，其他城市的岗位需求量就非常小了。因为大量工作机会集中在北上广深杭，所以数据分析岗的求职者可以考虑到这些城市去发展。
@@ -89,10 +87,7 @@ position_data=data.query('city in ["北京","上海","广州","深圳","杭州"]
 plt.yticks(range(0,50,3))
 plt.ylim(0, 45)
 sns.boxplot(x="city",y="bottomSalary",palette=sns.color_palette("Accent"),showmeans=True,data=position_data)
-
 ```
-
-#### 分析
 
 <img src="img/image-20200410090225851.png" alt="image-20200410090225851" style="zoom: 50%;" />
 
@@ -148,8 +143,6 @@ GROUP BY companySize
 ORDER BY `COUNT(positionId)` DESC
 ```
 
-#### 分析
-
 <img src="img/image-20200410114920410.png" alt="image-20200410114920410" style="zoom: 33%;" />
 
 显而易见，越是规模大的公司需求越大，求职者可以期待进入大公司工作。一般而言，大公司的数据量会很大，所以对数据分析师的需求自然会比小公司多。
@@ -165,8 +158,6 @@ plt.ylim(0, 52)
 sns.boxplot(x="companySize",y="bottomSalary",showmeans=True,data=company_position)
 ```
 
-#### 分析
-
 <img src="img/image-20200410125215002.png" alt="image-20200410125215002" style="zoom:50%;" />
 
 从图中看出，除去少于15人的公司，随着公司的规模减小，给数据分析师的薪酬均值是逐渐减少的。少于15人的公司给出的薪酬还不错，可能因为公司初创，需要更多的是经验比较丰富的数据分析师，所以开出的薪资比较高。
@@ -175,13 +166,11 @@ sns.boxplot(x="companySize",y="bottomSalary",showmeans=True,data=company_positio
 
 首先使用**python**的**jieba**对职位描述进行分词处理和**re**正则清洗数据，最后用superset可视化
 
-#### 分析
-
-一年以下工作经验（包括应届生）
+一年以下工作经验（包括应届生）：
 
 <img src="img/image-20200410171541744.png" alt="image-20200410171541744" style="zoom:33%;" />
 
-一年以上工作经验
+一年以上工作经验：
 
 <img src="img/image-20200410171831556.png" alt="image-20200410171831556" style="zoom: 33%;" />
 
@@ -197,8 +186,6 @@ sns.boxplot(x="companySize",y="bottomSalary",showmeans=True,data=company_positio
 
 <img src="img/image-20200410175636718.png" alt="image-20200410175636718" style="zoom: 33%;" />
 
-#### 分析
-
 字体越大代表需求量越大，大致顺序为Python、sql、Hadoop、spark、hive、java、excel等。市场上最需要的是熟练掌握上述一项或其中好几项工具的数据分析师。
 
 ### 11、不同基础工具对薪酬的影响
@@ -206,8 +193,6 @@ sns.boxplot(x="companySize",y="bottomSalary",showmeans=True,data=company_positio
 这里过滤掉需求量小于450的基础工具的数据。横轴和气泡的大小都代表岗位的需求量，纵轴代表薪酬均值（取薪酬下限和薪酬上限的平均值）
 
 <img src="img/image-20200411195716111.png" alt="image-20200411195716111" style="zoom:33%;" />
-
-#### 分析
 
 - 代表“大数据”方向的flink、storm、Hadoop、spark、hive这几个技能的薪酬均值达到了20K以上，另外Hadoop、spark、hive、java这四项技能位于图中右上角，代表不仅薪酬高而且需求量也大，可谓性价比超高的技能
 - Python、r、sql、bi这几个技能的薪酬也是不错的，位于16-18K区间，另外Python和SQL位于图中最右侧，代表需求是最大的
