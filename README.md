@@ -215,5 +215,8 @@ sns.boxplot(x="companySize",y="bottomSalary",showmeans=True,data=company_positio
 13. Python、r、sql、bi这几个技能的薪酬也是不错的，位于16-18K区间，另外Python和SQL这两项技能的需求是最大的，求职者可以考虑优先掌握这两项技能，快速获得工作机会
 14. 只掌握excel、ppt这种基本人人都会的技能，薪酬是最低的，约13K，所以求职者想要获得不错的薪资，还是要学习上面其他技能
 
+## 附件
 
+### superset dashboard
 
+![image-20200412200906505](img/image-20200412200906505.png)
